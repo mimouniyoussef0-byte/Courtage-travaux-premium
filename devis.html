@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CourtagePro — Demande de devis</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <span class="logo" aria-hidden="true"></span>
+        <span>CourtagePro</span>
+      </a>
+      <div class="nav-links">
+        <a class="" href="/">Accueil</a>
+        <a class="active" href="/devis">Demande de devis</a>
+        <a class="" href="/client">Espace client</a>
+        <a class="" href="/artisan">Espace artisan</a>
+        <a class="" href="/admin">Admin</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="/devis">Voir les projets</a>
+        <a class="btn btn-primary" href="/devis">Demander un devis</a>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="container">
+  <div class="split">
+    <div class="card">
+      <h2 class="section-title">Demande de devis</h2>
+      <p class="section-sub">Décrivez votre projet : nous vous recontactons avec des pros adaptés.</p>
+
+      <form id="devisForm" class="form">
+        <div>
+          <div class="label">Nom *</div>
+          <input class="input" name="nom" required placeholder="Ex : Karim Benali"/>
+        </div>
+        <div class="split" style="gap:10px">
+          <div>
+            <div class="label">Téléphone *</div>
+            <input class="input" name="telephone" required placeholder="Ex : 06 12 34 56 78"/>
+          </div>
+          <div>
+            <div class="label">Email *</div>
+            <input class="input" name="email" type="email" required placeholder="Ex : karim@mail.com"/>
+          </div>
+        </div>
+        <div class="split" style="gap:10px">
+          <div>
+            <div class="label">Ville / Zone *</div>
+            <input class="input" name="ville" required placeholder="Ex : Paris 12"/>
+          </div>
+          <div>
+            <div class="label">Type de travaux *</div>
+            <select name="typeTravaux" required>
+              <option value="">Choisir…</option>
+              <option>Rénovation</option>
+              <option>Plomberie</option>
+              <option>Électricité</option>
+              <option>Peinture</option>
+              <option>Toiture</option>
+              <option>Menuiserie</option>
+              <option>Isolation</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+        <div class="split" style="gap:10px">
+          <div>
+            <div class="label">Budget (optionnel)</div>
+            <input class="input" name="budget" placeholder="Ex : 6 000 – 10 000 €"/>
+          </div>
+          <div>
+            <div class="label">Délai (optionnel)</div>
+            <input class="input" name="delai" placeholder="Ex : sous 1 mois"/>
+          </div>
+        </div>
+        <div>
+          <div class="label">Description *</div>
+          <textarea name="description" required minlength="10" placeholder="Décrivez le projet (pièces, m², contraintes, photos, etc.)"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+        <div id="formMsg" class="msg"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0">Exemples de projets</h3>
+      <p class="section-sub">Pour inspirer votre description.</p>
+
+      <div style="margin-top:12px; display:grid; gap:10px">
+        <div class="card" style="box-shadow:none">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px">
+            <div>
+              <div style="font-weight:800">Rénovation salle de bain</div>
+              <div style="color:var(--muted); font-size:13px">Plomberie • Paris 15</div>
+            </div>
+            <span class="badge ok">6 000 – 10 000 €</span>
+          </div>
+          <p style="margin-top:8px">Douche italienne, carrelage, meuble vasque, reprise plomberie.</p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px">
+            <div>
+              <div style="font-weight:800">Isolation des combles</div>
+              <div style="color:var(--muted); font-size:13px">Isolation • Suresnes</div>
+            </div>
+            <span class="badge">6 000 – 20 000 €</span>
+          </div>
+          <p style="margin-top:8px">Soufflage laine, pare-vapeur, finitions, accès trappe.</p>
+        </div>
+
+        <img alt="Plans" style="width:100%; height:220px; border-radius:18px; border:1px solid var(--border); object-fit:cover"
+          src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=70"/>
+      </div>
+
+      <div style="margin-top:12px" class="notice">
+        Astuce : plus la description est précise, plus la mise en relation est efficace.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container footer">
+    <div>© 2026 CourtagePro — Démo premium (base à améliorer).</div>
+    <div class="notice">⚠️ Auth, paiement, matching avancé, messagerie : on les ajoute ensuite.</div>
+  </div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
